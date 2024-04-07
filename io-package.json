@@ -1,0 +1,87 @@
+{
+    "common": {
+        "name": "magicwand",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "Magic Wand",
+        "titleLang": {
+            "en": "Magic Wand",
+            "de": "Zauberstab",
+            "ru": "Волшебная палочка",
+            "pt": "Varinha mágica",
+            "nl": "Toverstaf",
+            "fr": "Baguette magique",
+            "it": "Bacchetta magica",
+            "es": "Varita mágica",
+            "pl": "Magiczna różdżka",
+            "uk": "Чарівна паличка",
+            "zh-cn": "魔法棒"
+        },
+        "desc": {
+            "en": "Collect Messages from the wand to write automations from Aguamenti to Wingardium Leviosa",
+            "de": "Sammle Nachrichten vom Zauberstab, um Automatisierungen von Aguamenti nach Wingardium Leviosa zu schreiben",
+            "ru": "Собирайте сообщения из палочки, чтобы написать автоматизацию от Агуаменти до Вингардиума Левиоса.",
+            "pt": "Colete mensagens da varinha para escrever automações de Aguamenti para Wingardium Leviosa",
+            "nl": "Verzamel berichten van de toverstaf om automatiseringen van Aguamenti naar Wingardium Leviosa te schrijven",
+            "fr": "Collectez les messages de la baguette pour écrire des automatisations d'Aguamenti à Wingardium Leviosa",
+            "it": "Raccogli i messaggi dalla bacchetta per scrivere automazioni da Aguamenti a Wingardium Leviosa",
+            "es": "Recoge mensajes de la varita para escribir automatizaciones desde Aguamenti a Wingardium Leviosa",
+            "pl": "Zbieraj Wiadomości z różdżki, aby pisać automatyzacje od Aguamenti do Wingardium Leviosa",
+            "uk": "Збирайте повідомлення з чарівної палички, щоб писати автоматизації від Агуаменті до Вінгардіума Левіози",
+            "zh-cn": "从魔杖收集消息以将自动化从 Aguamenti 写入 Wingardium Leviosa"
+        },
+        "authors": ["oelison <iobrokermagicwand@sciphy.de>"],
+        "keywords": ["wand", "wizzard", "receiver"],
+        "license": "MIT",
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "platform": "Javascript/Node.js",
+        "main": "build/main.js",
+        "icon": "magicwand.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/oelison/ioBroker.magicwand/main/admin/magicwand.png",
+        "readme": "https://github.com/oelison/ioBroker.magicwand/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "hardware",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "push",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": []
+}
