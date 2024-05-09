@@ -1,6 +1,6 @@
 {
   "name": "iobroker.magicwand",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Collect Messages from the wand to write automations from Aguamenti to Wingardium Leviosa",
   "author": {
     "name": "oelison",

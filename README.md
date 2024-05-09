@@ -28,8 +28,7 @@ Collect Messages from the wand to write automations from Accio to Wingardium Lev
     Placeholder for the next version (at the beginning of the line):
     ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.0.0 (2024-05-09)
 
 -   (oelison) initial release
 
