@@ -61,10 +61,32 @@ class Magicwand extends utils.Adapter {
             },
             native: {},
         });
+        this.setObjectNotExists("IP", {
+            type: "state",
+            common: {
+                name: "IP",
+                type: "string",
+                role: "text",
+                read: true,
+                write: false,
+            },
+            native: {},
+        });
         this.setObjectNotExists("FullSpell", {
             type: "state",
             common: {
                 name: "FullSpell",
+                type: "string",
+                role: "text",
+                read: true,
+                write: false,
+            },
+            native: {},
+        });
+        this.setObjectNotExists("FullSpellIP", {
+            type: "state",
+            common: {
+                name: "FullSpellIP",
                 type: "string",
                 role: "text",
                 read: true,
@@ -77,18 +99,22 @@ class Magicwand extends utils.Adapter {
             this.log.debug("UDP socket listening on " + address.address + ":" + address.port);
         });
         inSocket.on("message", (message, remote) => {
-            this.log.debug("received: " + message.toString());
+            this.log.debug("received: " + message.toString() + " from ip: " + remote.address);
             if (message.toString().startsWith("spell:")) {
                 const fullSpell = message.toString().substring(6);
+                const ipFromSender = remote.address;
+                const fullSpellIP = fullSpell + ":" + ipFromSender;
                 const dataOnly = fullSpell.split(":");
                 if (dataOnly.length == 3) {
                     const spell = dataOnly[0];
                     const house = dataOnly[1];
                     const patronus = dataOnly[2];
+                    this.setState("IP", { val: ipFromSender, ack: true });
                     this.setState("Spell", { val: spell, ack: true });
                     this.setState("House", { val: house, ack: true });
                     this.setState("Patronus", { val: patronus, ack: true });
                     this.setState("FullSpell", { val: fullSpell, ack: true });
+                    this.setState("FullSpellIP", { val: fullSpellIP, ack: true });
                 } else {
                     this.log.error("Mal formated spell. Muggel tech not able to read that.");
                 }
