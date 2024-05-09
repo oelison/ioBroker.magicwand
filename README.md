@@ -11,37 +11,16 @@
 
 ## magicwand adapter for ioBroker
 
-Collect Messages from the wand to write automations from Aguamenti to Wingardium Leviosa
+Collect Messages from the wand to write automations from Accio to Wingardium Leviosa. The spells are given in four different states as a text.
 
-### Writing tests
-
-When done right, testing code is invaluable, because it gives you the
-confidence to change your code while knowing exactly if and when
-something breaks. A good read on the topic of test-driven development
-is https://hackernoon.com/introduction-to-test-driven-development-tdd-61a13bc92d92.
-Although writing tests before the code might seem strange at first, but it has very
-clear upsides.
-
-The template provides you with basic tests for the adapter startup and package files.
-It is recommended that you add your own tests into the mix.
-
-### Publishing the adapter
-
-Using GitHub Actions, you can enable automatic releases on npm whenever you push a new git tag that matches the form
-`v<major>.<minor>.<patch>`. We **strongly recommend** that you do. The necessary steps are described in `.github/workflows/test-and-release.yml`.
-
-Since you installed the release script, you can create a new
-release simply by calling:
-
-```bash
-npm run release
-```
-
-Additional command line options for the release script are explained in the
-[release-script documentation](https://github.com/AlCalzone/release-script#command-line).
-
-To get your adapter released in ioBroker, please refer to the documentation
-of [ioBroker.repositories](https://github.com/ioBroker/ioBroker.repositories#requirements-for-adapter-to-get-added-to-the-latest-repository).
+| State       | Example                                   |
+| ----------- | ----------------------------------------- |
+| FullSpellIP | `Flagrate:Gryffindor:Cat:192.168.123.123` |
+| FullSpell   | `Flagrate:Gryffindor:Cat`                 |
+| House       | `Gryffindor`                              |
+| Patronus    | `Cat`                                     |
+| Spell       | `Flagrate`                                |
+| IP          | `192.168.123.123`                         |
 
 ## Changelog
 
